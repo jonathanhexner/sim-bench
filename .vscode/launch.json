@@ -1,0 +1,160 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "UKBench - Chi-Square",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "chi_square",
+                "--datasets", "ukbench",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "UKBench - EMD",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "emd",
+                "--datasets", "ukbench",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "UKBench - Deep",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "deep",
+                "--datasets", "ukbench",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "UKBench - SIFT BoVW",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "sift_bovw",
+                "--datasets", "ukbench",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Holidays - Chi-Square",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "chi_square",
+                "--datasets", "holidays",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Holidays - EMD",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "emd",
+                "--datasets", "holidays",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Holidays - Deep",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "deep",
+                "--datasets", "holidays",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Holidays - SIFT BoVW",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "sift_bovw",
+                "--datasets", "holidays",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "UKBench - Run All Methods",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "chi_square,emd,deep,sift_bovw",
+                "--datasets", "ukbench",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Holidays - Run All Methods",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "chi_square,emd,deep,sift_bovw",
+                "--datasets", "holidays",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Comprehensive Benchmark",
+            "type": "python",
+            "request": "launch",
+            "module": "sim_bench.cli",
+            "args": [
+                "--methods", "chi_square,emd,deep",
+                "--datasets", "ukbench,holidays",
+                "--run-config", "configs/run.yaml"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

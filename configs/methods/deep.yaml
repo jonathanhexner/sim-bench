@@ -1,0 +1,8 @@
+method: deep
+backbone: "resnet50"
+pooling: "avg"
+normalize: true
+batch_size: 16
+num_workers: 0
+similarity: "cosine"
+cache_dir: "artifacts/deep"
