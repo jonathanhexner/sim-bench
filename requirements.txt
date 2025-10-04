@@ -1,0 +1,10 @@
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.4
+opencv-contrib-python>=4.9
+Pillow>=10.2
+tqdm>=4.66
+PyYAML>=6.0
+matplotlib>=3.8
+# POT is optional and not required for the simple baseline
+# POT>=0.9.3

@@ -1,0 +1,19 @@
+name: holidays
+root: "D:/Similar Images/DataSets/InriaHolidaysFull"
+pattern: "*.jpg"
+description: "INRIA Holidays dataset - 1,491 images, 500 queries, variable group sizes"
+
+# Dataset characteristics
+total_images: 1491
+num_queries: 500
+# Query identification: Queries are automatically identified as the first (lowest numbered) image in each series
+# No separate query_pattern needed - queries are determined by logic, not filename pattern
+
+# Evaluation settings specific to Holidays
+evaluation:
+  # Holidays typically uses mAP as primary metric
+  primary_metric: "map"
+  # Standard evaluation uses all relevant images (no fixed k)
+  use_all_relevant: true
+  # Common evaluation depths
+  map_at_k: [10, 50, 100]

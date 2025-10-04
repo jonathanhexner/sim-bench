@@ -1,0 +1,9 @@
+method: chi_square
+features:
+  color_space: "HSV"
+  bins: [16, 16, 16]
+  preproc:
+    resize: [256, 256]
+    center_crop: [224, 224]
+distance: "chi2"          # fast chi-square distance baseline
+cache_dir: "artifacts/chi_square"

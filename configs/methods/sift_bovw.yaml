@@ -1,0 +1,12 @@
+method: sift_bovw
+local_features:
+  type: "SIFT"
+  n_features_per_image: 800
+codebook:
+  size: 512
+  kmeans_max_iter: 100
+  sample_images: 800
+  descriptors_per_image: 300
+representation: "l2"
+similarity: "cosine"
+cache_dir: "artifacts/sift_bovw"

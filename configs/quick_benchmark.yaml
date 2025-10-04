@@ -1,0 +1,44 @@
+# Quick benchmark configuration for testing
+# Run fast methods on both datasets with small samples
+
+output_dir: "outputs"
+run_name: "quick_benchmark"
+
+# Datasets to evaluate
+datasets:
+  - name: "ukbench"
+    config: "configs/dataset.ukbench.yaml"
+    sampling:
+      max_queries: 10
+      max_gallery: 50
+  - name: "holidays"
+    config: "configs/dataset.holidays.yaml"
+    sampling:
+      max_queries: 10
+      max_gallery: 100
+
+# Only fast methods for quick testing
+methods: [chi_square, emd, deep]
+
+# Global settings
+logging:
+  file: "quick_benchmark.log"
+  level: "INFO"
+
+save:
+  per_query_csv: true
+  rankings_csv: true
+  metrics_csv: true
+  summary_csv: true
+  topk_rankings_k: 10
+
+# UKBench specific settings
+ukbench:
+  k: 4
+  metrics: [ns, recall@1, recall@4, map@10]
+
+# Holidays specific settings  
+holidays:
+  metrics: [map_full, map@10, map@50, recall@1, recall@10, prec@10]
+
+random_seed: 42

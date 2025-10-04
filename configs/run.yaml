@@ -1,0 +1,23 @@
+dataset: ukbench
+output_dir: "outputs"
+run_name: null
+
+logging:
+  file: "run.log"
+  level: "INFO"
+
+save:
+  per_query_csv: true
+  rankings_csv: true
+  metrics_csv: true
+  summary_csv: true        # Create summary CSV comparing all methods
+  topk_rankings_k: 10
+
+k: 4
+metrics: [ns, recall@1, recall@4, map@10]
+methods: [chi_square, emd]  # List of methods to run with 'run-all' command
+
+sampling:
+  max_queries: 50
+  max_gallery: 2000
+  random_seed: 42

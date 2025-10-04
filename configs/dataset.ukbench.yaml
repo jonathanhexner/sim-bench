@@ -1,0 +1,6 @@
+name: ukbench
+root: "D:/Similar Images/DataSets/ukbench"
+subdirs:
+  images: "full"
+pattern: "ukbench*.jpg"
+assume_groups_of_four: true
