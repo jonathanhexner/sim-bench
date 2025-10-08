@@ -1,5 +1,5 @@
 """
-ResNet50 feature extraction method using pre-trained CNN.
+CNN feature method using pre-trained deep learning models.
 Uses configurable distance measures for comparison.
 """
 
@@ -19,8 +19,8 @@ from typing import List
 from sim_bench.feature_extraction.base import BaseMethod
 
 
-class ResNet50Method(BaseMethod):
-    """ResNet50 CNN features with configurable distance measures."""
+class CNNFeatureMethod(BaseMethod):
+    """CNN features with configurable distance measures."""
     
     def __init__(self, method_config):
         if not TORCH_AVAILABLE:
@@ -53,8 +53,7 @@ class ResNet50Method(BaseMethod):
     def extract_features(self, image_paths: List[str]) -> np.ndarray:
         """Extract deep CNN features from images."""
         backbone = self.method_config.get('backbone', 'resnet50')
-        bs = int(self.method_config.get('batch_size', 16))
-        print(f"Extracting {backbone} features from {len(image_paths)} images (batch_size={bs})...")
+        print(f"Extracting deep features ({backbone})...")
         
         device = torch.device("cpu")
         model = self._build_model(backbone).to(device)
@@ -62,7 +61,8 @@ class ResNet50Method(BaseMethod):
 
         feats = []
         batch = []
-        for f in tqdm(image_paths, desc=f"{backbone} features", unit="img"):
+        bs = int(self.method_config.get('batch_size', 16))
+        for f in tqdm(image_paths, desc="deep: embeddings"):
             img = Image.open(f).convert('RGB')
             batch.append(tr(img))
             if len(batch) == bs:
